@@ -99,14 +99,6 @@ public class UploadVideosAnalytic {
                         youtube.playlistItems().list("id,contentDetails,snippet");
                 playlistItemRequest.setPlaylistId(uploadPlaylistId);
 
-                // Only retrieve data used in this application, thereby making
-                // the application more efficient. See:
-                // https://developers.google.com/youtube/v3/getting-started#partial
-//                playlistItemRequest.setFields(
-//                        "items(contentDetails/videoId,snippet/title,snippet/publishedAt,statistics/likeCount,"
-//                                + "statistics/dislikeCount,statistics/commentCount,statistics/viewCount),"
-//                                + "nextPageToken,pageInfo");
-
                 String nextToken = "";
 
                 // Call the API one or more times to retrieve all items in the

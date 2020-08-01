@@ -75,14 +75,4 @@ public class Auth {
         // Authorize.
         return new AuthorizationCodeInstalledApp(flow, localReceiver).authorize("user");
     }
-
-//    public static void main(String[] args) {
-//        List<String> scopes = Arrays.asList("https://www.googleapis.com/auth/yt-analytics-monetary.readonly");
-//
-//        try {
-//            Credential credential = Auth.authorize(scopes, "/");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }
