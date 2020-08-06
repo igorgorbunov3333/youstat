@@ -1,5 +1,7 @@
-package com.company.youstat;
+package com.company.youstat.apiservice;
 
+import com.company.youstat.domain.SheetRange;
+import com.company.youstat.domain.VideoItem;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.BatchUpdateValuesRequest;
 import com.google.api.services.sheets.v4.model.BatchUpdateValuesResponse;

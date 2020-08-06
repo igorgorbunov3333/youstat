@@ -1,4 +1,4 @@
-package com.company.youstat;
+package com.company.youstat.apiservice;
 
 /*
  * Copyright (c) 2012 Google Inc.
@@ -14,6 +14,8 @@ package com.company.youstat;
  * the License.
  */
 
+import com.company.youstat.domain.VideoItem;
+import com.company.youstat.auth.Auth;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
@@ -26,6 +28,7 @@ import com.google.api.services.youtube.model.PlaylistItem;
 import com.google.api.services.youtube.model.PlaylistItemListResponse;
 import com.google.api.services.youtube.model.Video;
 import com.google.common.collect.Lists;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
@@ -39,6 +42,7 @@ import java.util.Map;
  *
  * @author Jeremy Walker
  */
+@Service
 public class UploadVideosAnalytic {
 
     /**
@@ -53,9 +57,8 @@ public class UploadVideosAnalytic {
      * and then call the youtube.playlistItems.list method to retrieve the
      * list of videos in that playlist.
      *
-     * @param args command line args (not used).
      */
-    public static void main(String[] args) {
+    public void calculateStatistic() {
 
         // This OAuth 2.0 access scope allows for read-only access to the
         // authenticated user's account, but not other types of account access.

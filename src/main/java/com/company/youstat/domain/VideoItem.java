@@ -1,4 +1,4 @@
-package com.company.youstat;
+package com.company.youstat.domain;
 
 public class VideoItem {
 
